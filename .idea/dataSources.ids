@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails migrated_photo_app: development" uuid="17999b18-78a0-412f-bbc1-4da47427a2f9">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails migrated_photo_app: test" uuid="708bac86-bb81-4d45-ba4d-603e61447b26">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails migrated_photo_app: production" uuid="54ac2386-8f39-45ea-8feb-f478ca74cb49">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

@@ -1,0 +1,61 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  title: MyString
+  series: MyString
+  isbn: MyString
+  copyright: MyString
+  number: MyString
+  author: MyString
+  level: MyString
+  imprint: MyString
+  edition: MyString
+  acronym: MyString
+  product_type: 1
+  imprint_id: 
+  budget: 9.99
+  image_assets: 1
+  media_assets: 1
+  text_assets: 1
+  start: 2014-12-08
+  revised_start: 2014-12-08
+  close: 2014-12-08
+  revised_close: 2014-12-08
+  printer: 2014-12-08
+  revised_printer: 2014-12-08
+  color: MyString
+  print_run: MyString
+  trim_size: MyString
+  price: 9.99
+  free_text: MyText
+
+two:
+  code: MyString
+  title: MyString
+  series: MyString
+  isbn: MyString
+  copyright: MyString
+  number: MyString
+  author: MyString
+  level: MyString
+  imprint: MyString
+  edition: MyString
+  acronym: MyString
+  product_type: 1
+  imprint_id: 
+  budget: 9.99
+  image_assets: 1
+  media_assets: 1
+  text_assets: 1
+  start: 2014-12-08
+  revised_start: 2014-12-08
+  close: 2014-12-08
+  revised_close: 2014-12-08
+  printer: 2014-12-08
+  revised_printer: 2014-12-08
+  color: MyString
+  print_run: MyString
+  trim_size: MyString
+  price: 9.99
+  free_text: MyText

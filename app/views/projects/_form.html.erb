@@ -1,0 +1,126 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :series %><br>
+    <%= f.text_field :series %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br>
+    <%= f.text_field :isbn %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br>
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :edition %><br>
+    <%= f.text_field :edition %>
+  </div>
+  <div class="field">
+    <%= f.label :acronym %><br>
+    <%= f.text_field :acronym %>
+  </div>
+  <div class="field">
+    <%= f.label :product_type %><br>
+    <%= f.number_field :product_type %>
+  </div>
+  <div class="field">
+    <%= f.label :imprint_id %><br>
+    <%= f.text_field :imprint_id %>
+  </div>
+  <div class="field">
+    <%= f.label :budget %><br>
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :image_assets %><br>
+    <%= f.number_field :image_assets %>
+  </div>
+  <div class="field">
+    <%= f.label :media_assets %><br>
+    <%= f.number_field :media_assets %>
+  </div>
+  <div class="field">
+    <%= f.label :text_assets %><br>
+    <%= f.number_field :text_assets %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.date_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :revised_start %><br>
+    <%= f.date_select :revised_start %>
+  </div>
+  <div class="field">
+    <%= f.label :close %><br>
+    <%= f.date_select :close %>
+  </div>
+  <div class="field">
+    <%= f.label :revised_close %><br>
+    <%= f.date_select :revised_close %>
+  </div>
+  <div class="field">
+    <%= f.label :printer %><br>
+    <%= f.date_select :printer %>
+  </div>
+  <div class="field">
+    <%= f.label :revised_printer %><br>
+    <%= f.date_select :revised_printer %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :print_run %><br>
+    <%= f.text_field :print_run %>
+  </div>
+  <div class="field">
+    <%= f.label :trim_size %><br>
+    <%= f.text_field :trim_size %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :free_text %><br>
+    <%= f.text_area :free_text %>
+  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

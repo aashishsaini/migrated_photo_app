@@ -1,0 +1,80 @@
+<h1>Listing Projects</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Title</th>
+      <th>Series</th>
+      <th>Isbn</th>
+      <th>Copyright</th>
+      <th>Number</th>
+      <th>Author</th>
+      <th>Level</th>
+      <th>Imprint</th>
+      <th>Edition</th>
+      <th>Acronym</th>
+      <th>Product type</th>
+      <th>Budget</th>
+      <th>Image assets</th>
+      <th>Media assets</th>
+      <th>Text assets</th>
+      <th>Start</th>
+      <th>Revised start</th>
+      <th>Close</th>
+      <th>Revised close</th>
+      <th>Printer</th>
+      <th>Revised printer</th>
+      <th>Color</th>
+      <th>Print run</th>
+      <th>Trim size</th>
+      <th>Price</th>
+      <th>Free text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.code %></td>
+        <td><%= project.title %></td>
+        <td><%= project.series %></td>
+        <td><%= project.isbn %></td>
+        <td><%= project.copyright %></td>
+        <td><%= project.number %></td>
+        <td><%= project.author %></td>
+        <td><%= project.level %></td>
+        <td><%= project.imprint %></td>
+        <td><%= project.edition %></td>
+        <td><%= project.acronym %></td>
+        <td><%= project.product_type %></td>
+        <td><%= project.budget %></td>
+        <td><%= project.image_assets %></td>
+        <td><%= project.media_assets %></td>
+        <td><%= project.text_assets %></td>
+        <td><%= project.start %></td>
+        <td><%= project.revised_start %></td>
+        <td><%= project.close %></td>
+        <td><%= project.revised_close %></td>
+        <td><%= project.printer %></td>
+        <td><%= project.revised_printer %></td>
+        <td><%= project.color %></td>
+        <td><%= project.print_run %></td>
+        <td><%= project.trim_size %></td>
+        <td><%= project.price %></td>
+        <td><%= project.free_text %></td>
+        <% if user_signed_in? %>
+            <td><%= link_to 'Show', project, class: 'btn btn-primary color-white' %></td>
+            <td><%= link_to 'Edit', edit_project_path(project), class: 'btn btn-primary color-white' %></td>
+            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger color-white' %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? %>
+    <%= link_to 'New Project', new_project_path, class: 'btn btn-primary color-white' %>
+<% end %>

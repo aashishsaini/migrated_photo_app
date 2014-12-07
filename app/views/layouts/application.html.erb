@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MigratedPhotoApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="container-fluid">
+      <%= nav_bar fixed: :top, brand: 'Migrated Project', :responsive => true do %>
+        <%= menu_group do  %>
+          <%= menu_item 'Home', root_path  %>
+          <%- if !user_signed_in?  %>
+              <%= menu_item "Sign In", new_user_session_path, pull: :right  %>
+          <% else %>
+              <%= menu_item 'Sign out', destroy_user_session_path, method: :delete  %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="clearfix"></div>
+<%= yield %>
+
+</body>
+</html>
